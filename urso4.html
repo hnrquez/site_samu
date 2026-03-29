@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ursinho 4 🧸</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    background: rgba(0, 0, 0, 0.6); /* escuro transparente */
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+    background: white;
+    color: #718296;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#msg {
+    margin-top: 20px;
+    font-size: 18px;
+    min-height: 60px;
+}
+    #bg-video {
+     position: fixed; /* fixa no fundo */
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover; /* cobre a tela inteira */
+     z-index: -1; /* fica atrás de tudo */
+    }
+    @media (max-width: 480px) {
+     .container {
+          width: 95%;
+          padding: 15px;
+       }
+
+     h1 {
+           font-size: 20px;
+         }
+
+     button {
+          font-size: 14px;
+          padding: 12px;
+     }
+
+        #msg {
+          font-size: 16px;
+         }
+    }
+    @media (min-width: 1024px) {
+        .container {
+           max-width: 500px;
+           padding: 30px;
+        }
+
+        button {
+          font-size: 18px;
+        }
+
+     #msg {
+         font-size: 20px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Segura o botão 💙 </h1>
+    <p>Não solta… confia no pai 😏</p>
+
+    <button id="btn">Segura aqui </button>
+
+    <p id="msg"></p>
+</div>
+
+<script>
+let tempo;
+
+const btn = document.getElementById("btn");
+const msg = document.getElementById("msg");
+
+function iniciar() {
+    tempo = setTimeout(() => {
+        msg.innerText = "Você teve paciência... igual eu vou ter pra esperar pra te comer 💙";
+    }, 2000);
+}
+
+function parar() {
+    clearTimeout(tempo);
+}
+
+// PC (mouse)
+btn.addEventListener("mousedown", iniciar);
+btn.addEventListener("mouseup", parar);
+btn.addEventListener("mouseleave", parar);
+
+// Celular (toque)
+btn.addEventListener("touchstart", iniciar);
+btn.addEventListener("touchend", parar);
+</script>
+  <video autoplay muted loop id="bg-video">
+      <source src="/site_para_samuka/img/Black and White Y2k Neon LED Lights Heart Background __ 1 Hour Looped HD.mp4" type="video/mp4">
+   </video>
+</body>
+</html>

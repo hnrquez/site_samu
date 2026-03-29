@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>BOA ESCOLHA MULEQUE</title>
+</head>
+<body>
+    <div id="imagens">
+        <H1>clique nos ursinho ❤️</H1>
+        <div id="cards">
+           <a href="/site_para_samuka/urso1.html" target="_blank"> <img src="/site_para_samuka/img/urso1.jpg" alt="ursinho fofo"></a> 
+            <a href="/site_para_samuka/urso2.html" target="_blank"><img src="/site_para_samuka/img/urso2.jpg" alt="urso fofo"></a>
+           <a href="/site_para_samuka/urso3.html" target="_blank"><img src="/site_para_samuka/img/urso3.jpg" alt="urso"></a> 
+           <a href="/site_para_samuka/urso4.html" target="_blank"><img src="/site_para_samuka/img/urso4.png" alt="ursoo" id="bx"></a> 
+        </div>
+        <div id="volt">
+           <a href="home.html">
+                <button class="voltar">VOLTAR</button>
+           </a> 
+           <style>
+            .voltar{
+                background-color: rgba(129, 41, 211, 0.664);
+                width: 100px;
+                height: 50px;
+                border-radius: 10px;
+                color: rgb(0, 0, 0);
+                border-style: none;
+            }
+            #volt{
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+            }
+           </style>
+        </div>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                    height: 100vh;
+                 
+               
+            }
+            h1{
+                text-align: center;
+                margin-top: 10%;
+            }
+            #bx{
+                height: 240px;
+                max-width: 500px;
+            }
+            #cards {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+                gap: 10px;
+            }
+            @media (max-width: 600px) {
+    #cards {
+        grid-template-columns: 1fr; /* 1 imagem por linha */
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+}
+        </style>
+    </div>
+</body>
+</html>

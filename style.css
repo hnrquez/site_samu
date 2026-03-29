@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    min-height: 100vh; /* 🔥 melhor que height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px; /* evita grudar na tela */
+}
+
+form{
+    width: 100%;
+    max-width: 300px; /* 🔥 responsivo */
+    background-color: aliceblue;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    gap: 20px;
+    padding: 20px;
+}
+
+#opc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+h1{
+    font-size: 24px;
+    text-align: center;
+}
+
+button{
+    width: 100%; /* 🔥 botão ocupa tudo no celular */
+    padding: 12px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+@media (max-width: 480px) {
+    form {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+    form {
+        max-width: 400px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}
+@media (min-width: 769px) {
+    form {
+        max-width: 500px;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    button {
+        font-size: 18px;
+        padding: 14px;
+    }
+}
